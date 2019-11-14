@@ -1,0 +1,30 @@
+{
+  "name": "phantom_seo",
+  "version": "1.0.0",
+  "description": "SEO node service based on phantom JS",
+  "main": "index.js",
+  "scripts": {
+    "server": "node src/testone.js",
+    "build": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvzhifu/phantom_seo.git"
+  },
+  "keywords": [
+    "seo",
+    "phantom.js",
+    "node",
+    "spa"
+  ],
+  "author": "烨智科技",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvzhifu/phantom_seo/issues"
+  },
+  "homepage": "https://github.com/lvzhifu/phantom_seo#readme",
+  "dependencies": {
+    "phantom": "^6.3.0",
+    "puppeteer": "^2.0.0"
+  }
+}
