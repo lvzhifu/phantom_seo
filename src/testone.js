@@ -17,6 +17,7 @@ httpd.createServer(async (req,res)=>{
         const browser = await puppeteer.launch({headless: true, timeout: 0});
         const page = await browser.newPage();
         await page.goto('http://sg-preview.linkerdeals.com/'+ myUrl.path, {waitUntil: 'networkidle0'});
+        // await page.goto('https://sg-qa.bysrd.cn/'+ myUrl.path, {waitUntil: 'networkidle0'});
         const html = await page.content(); // serialized HTML of page DOM.
         await browser.close();
         res.write(html);
