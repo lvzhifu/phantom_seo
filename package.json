@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/lvzhifu/phantom_seo#readme",
   "dependencies": {
-    "phantom": "^6.3.0",
     "puppeteer": "^2.0.0"
   }
 }
