@@ -33,3 +33,25 @@ http {
     }
 }
  ```
+
+## linux chrom 安装
+
+ ``` 
+    1.cd /etc/yum.repos.d/
+
+    2 vi google.repo
+    [gogle]
+
+    name=Google-x86_64
+
+    baseurl=http://dl.google.com/linux/rpm/stable/x86_64
+
+    enabled=1
+
+    gpgcheck=0
+
+    gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+    yum install google-chrome-stable
+ ```
+
