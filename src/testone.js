@@ -17,7 +17,7 @@ httpd.createServer(async (req,res)=>{
     let myUrl = url.parse(req.url, true); 
     console.log(myUrl)
     try {
-        const browser = await puppeteer.launch({headless: true, timeout: 50000000, args: ['--no-sandbox']});
+        const browser = await puppeteer.launch({timeout: 50000000, args: ['--no-sandbox']});
         const page = await browser.newPage();
         page.waitForNavigation({timeout: 48000000})
         // await page.goto('http://localhost/merchant'+ myUrl.search, {waitUntil: 'networkidle0'});
