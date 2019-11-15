@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 httpd.createServer(async (req,res)=>{
     console.log(req.url)
     console.log(req.url.indexOf('.'))
-    if(req.url.indexOf('.') > -1) {
+    if(req.url.indexOf('.') > -1 && req.url.indexOf('.html') < 0) {
         console.log('进入判断')
         res.end()    
         return
