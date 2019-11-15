@@ -17,7 +17,7 @@ httpd.createServer(async (req,res)=>{
     let myUrl = url.parse(req.url, true); 
     console.log(myUrl)
     try {
-        const browser = await puppeteer.launch({headless: true, timeout: 5000000, args: ['--no-sandbox']});
+        const browser = await puppeteer.launch({headless: true, timeout: 50000000, args: ['--no-sandbox']});
         const page = await browser.newPage();
         // await page.goto('http://sg-preview.linkerdeals.com/'+ myUrl.path, {waitUntil: 'networkidle0'});
         await page.goto('https://sg-qa.bysrd.cn/merchant'+ myUrl.search, {waitUntil: 'networkidle0'});
