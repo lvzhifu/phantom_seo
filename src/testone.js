@@ -5,7 +5,10 @@ const puppeteer = require('puppeteer');
 
 //创建服务
 httpd.createServer(async (req,res)=>{
+    console.log(req.url)
+    console.log(req.url.indexOf('.'))
     if(req.url.indexOf('.') > -1) {
+        console.log('进入判断')
         res.end()    
         return
     }
