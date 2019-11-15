@@ -19,10 +19,10 @@ httpd.createServer(async (req,res)=>{
     try {
         const browser = await puppeteer.launch({headless: true, timeout: 50000000, args: ['--no-sandbox']});
         const page = await browser.newPage();
-        await page.goto('http://localhost/merchant'+ myUrl.search, {waitUntil: 'networkidle0'});
+        // await page.goto('http://localhost/merchant'+ myUrl.search, {waitUntil: 'networkidle0'});
         // await page.goto('http://sg-preview.linkerdeals.com/merchant'+ myUrl.search, {waitUntil: 'networkidle0'});
 
-        // await page.goto('http://sg-qa.bysrd.cn/merchant'+ myUrl.search, {waitUntil: 'networkidle0'});
+        await page.goto('http://sg-qa.bysrd.cn/merchant'+ myUrl.search, {waitUntil: 'networkidle0'});
         const html = await page.content(); // serialized HTML of page DOM.
         await browser.close();
         res.write(html);
